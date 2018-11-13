@@ -2,6 +2,7 @@
 
 # 当前版本
 
+ * 2018-11-13 12.1.12
  * 2018-10-13 12.1.10
  * 2018-10-07 12.1.9
  * 2018-09-16 12.1.8
@@ -11,7 +12,7 @@
 
 # 原版下载地址
 
-[Navicat Premium 12.1.10 简体中文版.dmg](http://download3.navicat.com/download/navicat121_premium_cs.dmg)
+[Navicat Premium 12.1.12 简体中文版.dmg](http://download3.navicat.com/download/navicat121_premium_cs.dmg)
 
 # 使用说明
 
