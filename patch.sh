@@ -5,12 +5,12 @@ if [[ ! -e /usr/bin/bspatch ]]; then
 	exit 2
 fi
 
-SHA="1c68274911650074a000b51f14d62597c24e0ad1e306d69c0c3d109e3b424ef4"
+SHA="76a28e164a857c8154504068711a13f21e6bd115194fcc75e462bff07710cd04"
 SUBLIME="/Applications/Navicat Premium.app/Contents/MacOS/Navicat Premium"
 SUBLIME_TMP="/Applications/Navicat Premium.app/Contents/MacOS/Navicat Premium.tmp"
-SUBLIME_PATCH="./12.1.12.patch"
+SUBLIME_PATCH="./12.1.13.patch"
 
-VERSION=12.1.12
+VERSION=12.1.13
 
 if [[ -e /usr/bin/bspatch ]]; then
 	while :
@@ -18,7 +18,7 @@ if [[ -e /usr/bin/bspatch ]]; then
 		clear
 		echo "已安装 bspatch 程序, 准备应用补丁...";
 		echo
-		echo "本补丁仅适用于 Navicat Premium 12.1.12 简体中文版, 请确认您已将程序安装至应用程序目录?"
+		echo "本补丁仅适用于 Navicat Premium 12.1.13 简体中文版, 请确认您已将程序安装至应用程序目录?"
 		echo "  1) 已经安装原版"
 		echo "  2) 退出补丁"
 		read -p "请选择 [1-2]: " option
@@ -43,7 +43,7 @@ if [[ -e /usr/bin/bspatch ]]; then
 				fi
 				echo "搞定!"
 			else
-				echo "您的文件版本不正确, 或已被修改, 请通过官方网站下载 Navicat Premium 12.1.12 简体中文版."
+				echo "您的文件版本不正确, 或已被修改, 请通过官方网站下载 Navicat Premium 12.1.13 简体中文版."
 				exit 3
 			fi
 			exit
