@@ -5,12 +5,12 @@ if [[ ! -e /usr/bin/bspatch ]]; then
 	exit 2
 fi
 
-SHA="f842523755f70977b5544db7d70fb8c0b987e7eb9418c795c3e4652e30999779"
-SUBLIME="/Applications/Navicat Premium.app/Contents/MacOS/Navicat Premium"
-SUBLIME_TMP="/Applications/Navicat Premium.app/Contents/MacOS/Navicat Premium.tmp"
-SUBLIME_PATCH="./12.1.14.patch"
+SHA="5292f89ce9fbeb186ad119608592b1ab27a9dfa300e811077a3a8dd1126aa1f2"
+NAVICAT="/Applications/Navicat Premium.app/Contents/MacOS/Navicat Premium"
+NAVICAT_TMP="/Applications/Navicat Premium.app/Contents/MacOS/Navicat Premium.tmp"
+NAVICAT_PATCH="./12.1.15.patch"
 
-VERSION=12.1.14
+VERSION=12.1.15
 
 if [[ -e /usr/bin/bspatch ]]; then
 	while :
@@ -18,7 +18,7 @@ if [[ -e /usr/bin/bspatch ]]; then
 		clear
 		echo "已安装 bspatch 程序, 准备应用补丁...";
 		echo
-		echo "本补丁仅适用于 Navicat Premium 12.1.14 简体中文版, 请确认您已将程序安装至应用程序目录?"
+		echo "本补丁仅适用于 Navicat Premium 12.1.15 简体中文版, 请确认您已将程序安装至应用程序目录?"
 		echo "  1) 已经安装原版"
 		echo "  2) 退出补丁"
 		read -p "请选择 [1-2]: " option
@@ -27,23 +27,23 @@ if [[ -e /usr/bin/bspatch ]]; then
 			echo
 			echo "开始目标文件程序版本是否正确..."
 			echo
-			FILESHA=$(shasum -a 256 "$SUBLIME" | cut -f 1 -d " ")
+			FILESHA=$(shasum -a 256 "$NAVICAT" | cut -f 1 -d " ")
 			if [[ "$FILESHA" == "$SHA" ]]; then
 				echo
 				echo "准备开始应用补丁..."
 				echo
 
-				if [[ ! -e "$SUBLIME_TMP" ]]; then
-					bspatch "$SUBLIME" "$SUBLIME_TMP" "$SUBLIME_PATCH"
+				if [[ ! -e "$NAVICAT_TMP" ]]; then
+					bspatch "$NAVICAT" "$NAVICAT_TMP" "$NAVICAT_PATCH"
 				fi
-				if [[ -e "$SUBLIME_TMP" ]]; then
-					rm "$SUBLIME"
-					mv "$SUBLIME_TMP" "$SUBLIME"
-					chmod a+x "$SUBLIME"
+				if [[ -e "$NAVICAT_TMP" ]]; then
+					rm "$NAVICAT"
+					mv "$NAVICAT_TMP" "$NAVICAT"
+					chmod a+x "$NAVICAT"
 				fi
 				echo "搞定!"
 			else
-				echo "您的文件版本不正确, 或已被修改, 请通过官方网站下载 Navicat Premium 12.1.14 简体中文版."
+				echo "您的文件版本不正确, 或已被修改, 请通过官方网站下载 Navicat Premium 12.1.15 简体中文版."
 				exit 3
 			fi
 			exit
