@@ -5,6 +5,9 @@ if [[ ! -e /usr/bin/bspatch ]]; then
 	exit 2
 fi
 
+# EN 12.1.24
+# SHA="9ce22912f77826ef3d55adf2157554ca6a9a233c78ce2df8e34ad0027c7d2dc1"
+# NAVICAT_PATCH="./12.1.24.en.patch"
 SHA="fbc6611a1c2c5bc789289d3f793f66b8f5f146f2a57cdc5e12d1a4e952797a88"
 NAVICAT="/Applications/Navicat Premium.app/Contents/MacOS/Navicat Premium"
 NAVICAT_TMP="/Applications/Navicat Premium.app/Contents/MacOS/Navicat Premium.tmp"
